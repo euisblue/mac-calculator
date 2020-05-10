@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## JavaScript Study
 
 =======
@@ -23,3 +24,7 @@ The Odin Project - Web Development 101
 
 [Demo](http://jioneeu.com/toy-projects/etch-a-sketchy/src)
 >>>>>>> 08d1773 ([top] etch a sketchy project done)
+=======
+# google-page-clone
+Google homepage clone
+>>>>>>> 0082e32 (Initial commit)
