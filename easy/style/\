@@ -1,0 +1,100 @@
+:root {
+	--search-bar-width: 400px;
+}
+
+body {
+	font-family: arial, sans-serif;
+}
+
+/******************************/
+/********** HEADER            */
+/******************************/
+.header {
+	font-size: 13px;
+	float: right;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	width: 185px;
+}
+
+/******************************/
+/********** MAIN              */
+/******************************/
+.logo {
+	width: 272px;
+	margin: 0 auto;
+}
+
+.search-bar {
+	width: var(--search-bar-width, 400px);
+	width: 400px;
+	margin: 0 auto;
+}
+
+.search-bar input {
+	width: var(--search-bar-width, 400px);
+}
+
+.search-buttons {
+	width: 250px;
+	margin: 0 auto;
+}
+
+.lang-choice {
+	font-size: 13px;
+	width: 200px;
+	margin: 0 auto;
+}
+
+/******************************/
+/********** FOOTER            */
+/******************************/
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #f2f2f2;
+	font-size: 15px;
+}
+
+footer .footer-left {
+	font-size: 14px;
+	display: flex;
+	float: left;
+}
+
+footer .footer-left div {
+	padding: 0 0 0 27px;
+}
+
+.footer {
+	padding-right: 10px;
+}
+
+footer .footer .footer-right {
+	font-size: 14px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+footer .footer .footer-right div {
+	padding: 0 0 0 27px;
+}
+
+/******************************/
+/********** ICONS             */
+/******************************/
+.icon-google-apps {
+	width: 30px;
+	height: 30px;
+	background: url("../assets/icons.png") 65px 35px;
+	filter: brightness(50%);
+}
+
+a div.icon-google-apps:hover {
+	background: url("../assets/icons.png") -132px 33px;
+}
