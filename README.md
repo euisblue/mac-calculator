@@ -36,8 +36,12 @@ Google homepage clone
 # Google page clone
 >>>>>>> 5630878 ([fix] README format fixed)
 - Easy version
- + Build the [Google.com](https://www.google.com/) homepage
+  + Build the [Google.com](https://www.google.com/) homepage
 
 - Hard version (optional)
+<<<<<<< HEAD
  + Build the [Google.com search result](https://www.google.com/search?sxsrf=ALeKk02K2p8Z-AaJN7Q5M8tYozdUJztnVw%3A1589100497137&ei=0b-3Xsf4B82xmAWhgae4Ag&q=hire+me&oq=hire+me&gs_lcp=CgZwc3ktYWIQAzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BAgjECc6DQguEEMQiwMQmAMQqAM6BAgAEEM6EQguEMcBEKMCEIsDEKcDEKgDOgUIABCRAjoLCC4QiwMQqAMQnQM6EQguEMcBEKMCEIsDEKgDEKcDOgsILhCLAxCoAxCkAzoLCC4QiwMQqAMQowM6CwguEIsDEJ0DEKgDUPEFWIA3YNM3aABwAHgAgAGJBYgBwBeSAQswLjEuMy4xLjAuM5gBAKABAaoBB2d3cy13aXq4AQI&sclient=psy-ab&ved=0ahUKEwiHpZPV9KjpAhXNGKYKHaHACScQ4dUDCAw&uact=5)  page.
 >>>>>>> f0b71a0 (basic setting added)
+=======
+  + Build the [Google.com search result](https://www.google.com/search?sxsrf=ALeKk02K2p8Z-AaJN7Q5M8tYozdUJztnVw%3A1589100497137&ei=0b-3Xsf4B82xmAWhgae4Ag&q=hire+me&oq=hire+me&gs_lcp=CgZwc3ktYWIQAzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BAgjECc6DQguEEMQiwMQmAMQqAM6BAgAEEM6EQguEMcBEKMCEIsDEKcDEKgDOgUIABCRAjoLCC4QiwMQqAMQnQM6EQguEMcBEKMCEIsDEKgDEKcDOgsILhCLAxCoAxCkAzoLCC4QiwMQqAMQowM6CwguEIsDEJ0DEKgDUPEFWIA3YNM3aABwAHgAgAGJBYgBwBeSAQswLjEuMy4xLjAuM5gBAKABAaoBB2d3cy13aXq4AQI&sclient=psy-ab&ved=0ahUKEwiHpZPV9KjpAhXNGKYKHaHACScQ4dUDCAw&uact=5)  page.
+>>>>>>> a28dccc ([fix] README list fixed)
