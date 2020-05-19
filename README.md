@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## JavaScript Study
 
 =======
@@ -31,6 +32,9 @@ Google homepage clone
 >>>>>>> 0082e32 (Initial commit)
 =======
 #Google page clone
+=======
+# Google page clone
+>>>>>>> 5630878 ([fix] README format fixed)
 - Easy version
  + Build the [Google.com](https://www.google.com/) homepage
 
