@@ -1,5 +1,5 @@
 :root {
-	--search-bar-width: 430px;
+	--search-bar-width: 580px;
 }
 
 body {
@@ -11,6 +11,8 @@ body {
 /******************************/
 .header {
 	font-size: 13px;
+	padding-top: 4px;
+	padding-right: 23px;
 	float: right;
 }
 
@@ -49,24 +51,33 @@ body {
 .logo {
 	width: 272px;
 	margin: 0 auto;
-	padding-top: 156px;
-	padding-left: 19px;
+	padding-top: 200px;
 }
 
 .search-bar {
-	width: var(--search-bar-width, 430px);
-	margin: 22px 0 22px 270px;
+	display: flex;
+	width: var(--search-bar-width, 580px);
+	margin: 22px auto;
 }
 
 .search-bar input {
-	width: var(--search-bar-width, 430px);
-	padding: 10px 0;
-	margin-left: 12px;
+	width: var(--search-bar-width, 580px);
+	padding: 14.5px 0;
+	border-radius: 30px;
+	border: 1px solid #dcdcdc;
+	outline: none;
+	padding-left: 10px;
+}
+
+.search-bar input:hover {
+	box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+	border-color: rgba(223, 225, 2239, 0);
 }
 
 .search-buttons {
 	width: 300px;
-	margin: 10px 0 0 350px;
+	margin-top: 10px;
+	margin: 0 auto;
 }
 
 .search-buttons input {
@@ -81,10 +92,18 @@ body {
 	font-size: 14px;
 }
 
+.search-buttons input:hover {
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+	background-color: #f8f8f8;
+	border: 1px solid #c6c6c6;
+	color: #222;
+	cursor: pointer;
+}
+
 .lang-choice {
 	font-size: 13px;
 	width: 200px;
-	margin: 25px 390px;
+	margin: 25px auto;
 }
 
 .lang-choice a {
@@ -101,18 +120,18 @@ body {
 /********** FOOTER            */
 /******************************/
 footer {
+	background-color: #f2f2f2;
 	color: rgba(0,0,0,0.54);
 	position: fixed;
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	background-color: #f2f2f2;
 	font-size: 15px;
 }
 
 footer > div:nth-child(1) {
 	border-top: 1px solid #e4e4e4;
-	padding: 15px 0 15px 27px;
+	padding: 13px 0 13px 28px;
 }
 
 footer > div:nth-child(2) {
@@ -121,11 +140,21 @@ footer > div:nth-child(2) {
 }
 
 .footer-left div, .footer-right div {
-	padding: 15px 0 15px  27px;
+	padding: 13px 0 13px  28px;
 }
 
 footer .footer-left, footer .footer-right {
+	color: #5f6368;
 	display: flex;
+}
+
+footer .footer-left a, footer .footer-right a {
+	color: #5f6368;
+	text-decoration: none;
+}
+
+footer .footer-left a:hover, footer .footer-right a:hover {
+	text-decoration: underline;
 }
 
 footer .footer-left {
@@ -148,4 +177,10 @@ footer .footer-right {
 
 a div.icon-google-apps:hover {
 	background: url("../assets/icons.png") -132px 32px;
+}
+
+.search-icon {
+	width: 35px;
+	height: 40px;
+	background: url("../assets/search.webp") -2px 83px;
 }
