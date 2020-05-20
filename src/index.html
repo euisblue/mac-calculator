@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		"use strict"
+
+		/* randomly return Rock, Paper, or Scissors */
+		function computerPlay() {
+			let options = ["rock", "paper", "scissor"];
+			return options[Math.floor(Math.random() * 3)];
+		}
+
+		/* choose what to do */
+		function playerPlay() {
+			let hand = prompt("Rock, Paper, or Scissor?").toLowerCase()
+			return hand;
+		}
+
+		/* evaluate */
+		function fight(player, computer) {
+			let p = player[0];
+			let c = computer[0];
+			let result = ''
+			if(fight.win == undefined) 
+				fight.win = 0;
+			if(fight.lost == undefined) 
+				fight.lost = 0;
+			if(fight.draw == undefined) 
+				fight.draw = 0;
+
+			if(p=='r' && c=='r') {
+				result = "Draw";
+				fight.draw++;
+			} else if(p=='p' && c=='p') {
+				result = "Draw";
+				fight.draw++;
+			} else if(p=='s' && c=='s') {
+				result = "Draw";
+				fight.draw++;
+			} else if(p=='r' && c=='p') {
+				result = "Player Lost.";
+				fight.lost++;
+			} else if(p=='r' && c=='s') {
+				result = "Player Won.";
+				fight.win++;
+			} else if(p=='p' && c=='r') {
+				result = "Player Won.";
+				fight.win++;
+			} else if(p=='p' && c=='s') {
+				result = "Player Lost.";
+				fight.lost++;
+			} else if(p=='s' && c=='r') {
+				result = "Player Lost.";
+				fight.lost++;
+			} else {
+				result = "Player Won.";
+				fight.win++;
+			}
+
+			return [result, fight.win, fight.lost, fight.draw];
+		}
+
+		function play() {
+			for(let i=0; i<5; ++i) {
+				let computer = computerPlay();
+				let player = playerPlay();
+				let result = fight(player, computer);
+
+				console.log("Player: [" + player.toUpperCase() +"]");
+				console.log("Computer: [" + computer.toUpperCase() + "]");
+				console.log("Result: " + result[0] + "\n");
+				console.log("Win/Lost/Draw: " + result[1] + "/" + result[2] + "/" + result[3]);
+			}
+		}
+
+		play();
+	</script>
+	
+</body>
+</html>
