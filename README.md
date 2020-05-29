@@ -17,4 +17,9 @@ The Odin Project - Web Development 101
 =======
 # etch-a-sketchy
 The Odin Project - Web Development 101
+<<<<<<< HEAD
 >>>>>>> ec27d85 (Initial commit)
+=======
+
+[Demo](http://jioneeu.com/toy-projects/etch-a-sketchy/src)
+>>>>>>> 08d1773 ([top] etch a sketchy project done)
