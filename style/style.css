@@ -123,7 +123,7 @@ div.base-value {
 }
 
 div.base-value input {
-	width: 90px;
+	width: 70px;
 	border: none;
 	background-color: #444f50;
 	color: white;
@@ -170,7 +170,7 @@ div.current-type {
 #logical-keys button:hover,
 #normal-keys button:hover,
 #fn-keys button:hover {
-	border: 1px solid #6d9fff;
+	border: 1px solid #7bceff;
 }
 
 #logical-keys button:active,
@@ -178,4 +178,13 @@ div.current-type {
 #fn-keys button:active {
 	background-color: rgb(255,255,255,0.3);
 >>>>>>> eb5a49c (normal keys are clikable. FnKeys and LogicalKeys are still in progress.)
+}
+
+
+#logical-keys button:disabled,
+#normal-keys button:disabled,
+#fn-keys button:disabled {
+	background-color: #15000012;
+	border: 1px solid #ffffff21;
+	color: #ffffff87;
 }
