@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet"  href="../style/style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap" rel="stylesheet">
+		<title>じゃんけんぽん</title>
+	</head>
+	<body>
+		<div id="game-screen">
+			<span>相手</span>
+			<div id="computer-selection">
+				<img src="../assets/rock.png" alt="computer choice">
+			</div>
+			<span>プレイヤー</span>
+			<div id="player-selection">
+				<button id="btn-rock" value="rock" onclick="playRound(this.value)">
+					<img src="../assets/rock.png" alt="rock">
+				</button>
+				<button id="btn-paper" value="paper" onclick="playRound(this.value)">
+					<img src="../assets/paper.png" alt="paper">
+				</button>
+				<button id="btn-scissor" value="scissor" onclick="playRound(this.value)">
+					<img src="../assets/scissor.png" alt="scissor">
+				</button>
+			</div>
+		</div>
+		<div id="result">
+			<span class="result-final"></span>
+		</div>
+	</body>
+	<script src="../js/logic.js"></script>
+</html>
