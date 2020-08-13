@@ -1,0 +1,124 @@
+body {
+	font-weight: bold;
+}
+#calc-body {
+	border: 1px solid blue;
+	width: 535px;
+	height: 430px;
+
+	background-color: #444f50;
+}
+
+#display {
+	width: 96%;
+	height: 40px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+#display input {
+	width: 98%;
+	height: 40px;
+	margin: 0 auto;
+	text-align: right;
+	border: 0.5px solid #838383;
+	padding-right: 10px;
+
+	color: white;
+	background-color: #272b2b;
+	font-size: 16px;
+}
+
+#base-option {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	margin: 0 auto;
+	font-size: 14px;
+	color: white;
+	font-weight: normal;
+}
+
+div.base-radio {
+	display: flex;
+	justify-content: space-between;
+}
+
+div.base-radio span {
+	width: 90px;;
+}
+
+div.base-value {
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+	padding-top: 5px;
+	margin-bottom: -5px;
+}
+
+div.base-value input {
+	width: 70px;
+	border: none;
+	background-color: #444f50;
+	color: white;
+}
+
+#keypads {
+	display: flex;
+	margin-top: 5px;
+}
+
+#logical-keys,
+#normal-keys,
+#fn-keys {
+	height: 310px;
+	width: 33%;
+}
+
+#logical-keys table,
+#normal-keys table,
+#fn-keys table {
+	width: 100%;
+	height: 90%;
+	margin-top: 15px;
+}
+
+#logical-keys button, 
+#normal-keys button,
+#fn-keys button {
+	width: 95%;
+	height: 90%;
+
+	background-color: #444f50;
+	color: white;
+	border: 1px solid #838383;
+}
+
+div.current-type {
+	float: right;
+	color: white;
+	margin: 5px 45px 20px 0;
+	font-size: 13px;
+}
+
+#logical-keys button:hover,
+#normal-keys button:hover,
+#fn-keys button:hover {
+	border: 1px solid #7bceff;
+}
+
+#logical-keys button:active,
+#normal-keys button:active,
+#fn-keys button:active {
+	background-color: rgb(255,255,255,0.3);
+}
+
+
+#logical-keys button:disabled,
+#normal-keys button:disabled,
+#fn-keys button:disabled {
+	background-color: #15000012;
+	border: 1px solid #ffffff21;
+	color: #ffffff87;
+}
