@@ -13,7 +13,7 @@ body {
 #app {
     width: 270px;
     height: 355px;
-    border: 1px solid rgba(0,0,0,0.3);
+    border: 0.7px solid rgba(0,0,0,1);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 9px 15px 25px rgba(0,0,0,0.5);
@@ -91,9 +91,8 @@ body {
 }
 
 button {
-    font-size: 20px;
+    font-size: 23px;
     width: 100%;
-    font-weight: 400;
 
     border: 0.2px solid rgba(0, 0, 0, 0.4);
     color: rgba(255,255,255,0.9);
