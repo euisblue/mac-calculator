@@ -9,7 +9,8 @@ function operate(op) {
         case 'sign':
             break;
         case 'equal':
-            let temp = eval(num1 + " " + operation + " " + num2);
+            let expr = (num1 + " " + operation + " " + num2);
+            let temp = Function('"use strict"; return (' + expr + ')')();
             num1 = '';
             num2 = '';
             operation = null;
