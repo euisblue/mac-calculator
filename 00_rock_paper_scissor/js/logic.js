@@ -28,11 +28,11 @@ async function playRound(str) {
 	running = false;
 
 	if(p=='r' && c=='r') {
-		result = "引き分け";
+		result = "あいこでしょ";
 	} else if(p=='p' && c=='p') {
-		result = "引き分け";
+		result = "あいこでしょ";
 	} else if(p=='s' && c=='s') {
-		result = "引き分け";
+		result = "あいこでしょ";
 	} else if(p=='r' && c=='p') {
 		result = "相手の勝ち";
 	} else if(p=='r' && c=='s') {

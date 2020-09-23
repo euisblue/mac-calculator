@@ -2,4 +2,4 @@
 
 This project was done for [The Odin Project](https://www.theodinproject.com).
 
-[Demo](http://jioneeu.com/toy-projects/rock-paper-scissor/src)
+[Demo](https://jioneeu.github.io/projects/rock_paper_scissor/index.html)
