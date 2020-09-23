@@ -2,7 +2,7 @@
 
 The Odin Project - Web Development 101
 
-[Simple Calculator](./simple)
+[Simple Calculator](./simple) - Mac OS Calculator
 - Basic arithmetic
   + Add
   + Subtract
