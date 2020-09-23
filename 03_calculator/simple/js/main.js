@@ -11,9 +11,10 @@ function operate(op) {
         case 'equal':
             let expr = (num1 + " " + operation + " " + num2);
             let temp = Function('"use strict"; return (' + expr + ')')();
+            // temp = Math.round((temp + Number.EPSILON) * 10000000) / 10000000;
             num1 = '';
             num2 = '';
-            operation = null;
+            operation = '';
             return temp;
         case '.':
             break;
@@ -24,7 +25,17 @@ function operate(op) {
         case '/':
             num1 = num2;
             num2 = '';
-            operation = op;
+            if(operation === '') {
+                operation = op;
+            } else {
+                let expr = (num1 + " " + operation + " " + num2);
+                let temp = Function('"use strict"; return (' + expr + ')')();
+                // temp = Math.round((temp + Number.EPSILON) * 10000000) / 10000000;
+                num1 = '';
+                num2 = '';
+                operation = '';
+                return temp;
+            }
             return '';
         default:
             result += op;
@@ -35,7 +46,7 @@ function operate(op) {
 
 let num1 = '';
 let num2 = '';
-let operation = null;
+let operation = '';
 
 const resultPanel = document.querySelector('#result-panel #expr');
 
