@@ -8,6 +8,7 @@ body {
     margin: 3em auto;
     font-variant-numeric: ordinal;
     font-family: 'Inter', sans-serif;
+    background-color: rgb(219, 219, 219);
 }
 
 #app {

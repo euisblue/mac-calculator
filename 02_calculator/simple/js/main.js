@@ -1,65 +1,29 @@
-function operate(op) {
-    if (num2==='0') num2 = '';
-    let result = num2;
+function operate(val) {
+    let temp = result;
 
-    switch(op) {
-        case 'clear':
-            result = '0';
-            break;
-        case 'sign':
-            break;
-        case 'equal':
-            let expr = (num1 + " " + operation + " " + num2);
-            let temp = Function('"use strict"; return (' + expr + ')')();
-            // temp = Math.round((temp + Number.EPSILON) * 10000000) / 10000000;
-            num1 = '';
-            num2 = '';
-            operation = '';
-            return temp;
-        case '.':
-            break;
-        case '%':
-        case '+': 
-        case '-':
-        case '*':
-        case '/':
-            num1 = num2;
-            num2 = '';
-            if(operation === '') {
-                operation = op;
-            } else {
-                let expr = (num1 + " " + operation + " " + num2);
-                let temp = Function('"use strict"; return (' + expr + ')')();
-                // temp = Math.round((temp + Number.EPSILON) * 10000000) / 10000000;
-                num1 = '';
-                num2 = '';
-                operation = '';
-                return temp;
-            }
-            return '';
-        default:
-            result += op;
+    if (val === 'C') {
+        num = result = '0';
+        operation = '';
+        return result;
     }
+   if (temp === '0') temp = val;
+   else temp += val;
 
-    return result;
+   return temp;
 }
 
-let num1 = '';
-let num2 = '';
+let num = '0';
 let operation = '';
+let result = '0';
 
 const resultPanel = document.querySelector('#result-panel #expr');
 
 let buttons = document.getElementsByTagName('button');
 for(let i=0; i<buttons.length; ++i) {
     let button = buttons[i];
+
     button.onclick =  function()  {
-        num2 = operate(button.value);
-        if (num2==='') {
-            resultPanel.textContent = num1;
-            num2 = '';
-        } else {
-            resultPanel.textContent = num2;
-        }
+        result = operate(button.value);
+        resultPanel.textContent = result;
     };
 }
