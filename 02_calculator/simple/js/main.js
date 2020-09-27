@@ -7,13 +7,14 @@ function operate(val) {
         result = '';
         operand1 = '';
         operand2 = '';
+        saved = '';
         resultPanel.textContent = '0';
         resultPanel.style.fontSize = '45px';
-        
+
         return '';
     }
 
-   if (temp === '0') return temp;
+   if (temp === '0') return operand1;
    else {
        switch(val) {
            case 'sign':
@@ -24,10 +25,18 @@ function operate(val) {
             case '*':
             case '/':
             case '%':
-                operand1 = result;
+                reset = false;
+                if(operand2 != '') {
+                    let expr = operand1 + op + operand2;
+                    operand1 = Function('"use strict"; return (' + expr + ')')();
+                    operand2 = '';
+                } else {
+                    operand1 = result;
+                }
                 op = val;
                 break;
             case '=':
+                if(op==='') break;
                 if(operand2 === '') operand2 = saved;
                 else if(operand2 === temp*-1) operand2 = temp;
                 let expr = operand1 + op + operand2;
@@ -35,14 +44,19 @@ function operate(val) {
                 operand1 = temp;
                 operand2 = '';
             
+                reset = true;
                 break;
             default:
                 // temp += val;
                 if(op === '') {
                     operand1 += val;
                     temp = operand1;
-                }
-                else { 
+                    reset = false;
+                }  else if (reset) {
+                    operand1 = val;
+                    temp = operand1;
+                    op = '';
+                } else { 
                     operand2 += val;
                     temp = operand2;
                     saved = operand2;
@@ -58,6 +72,7 @@ let result = '';
 let operand1 = '';
 let operand2 = '';
 let saved = '';
+let reset = false;
 
 const resultPanel = document.querySelector('#result-panel #expr');
 
@@ -77,6 +92,7 @@ for(let i=0; i<buttons.length; ++i) {
         } else if((result+'').length > 0) {
             resultPanel.style.fontSize = '45px';
         } 
+
         console.log("result: " + result);
         console.log("operand1: " + operand1);
         console.log("op:   " + op);
