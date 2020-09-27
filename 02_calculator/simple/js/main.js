@@ -3,33 +3,50 @@ function operate(val) {
 
     // clear calculation
     if (val === 'C') {
-        result = '0';
         op = '';
-        return result;
+        result = '';
+        operand1 = '';
+        operand2 = '';
+        resultPanel.textContent = '0';
+        resultPanel.style.fontSize = '45px';
+        
+        return '';
     }
 
-   if (temp === '0') temp = val;
+   if (temp === '0') return temp;
    else {
        switch(val) {
+           case 'sign':
+               temp *= -1;
+               break;
             case '+':
             case '-':
             case '*':
             case '/':
             case '%':
+                operand1 = result;
                 op = val;
-                opSelected = true;
-                operand1 = temp;
-                return '';
+                break;
             case '=':
-                if(operand1 != null && operand2 === null) {
-                    if(op==='') return operand1;
-                    if(result==='') result = operand1;
-                    let expr = result + op + operand1;
-                    temp = Function('"use strict"; return (' + expr + ')')();
-                } 
+                if(operand2 === '') operand2 = saved;
+                else if(operand2 === temp*-1) operand2 = temp;
+                let expr = operand1 + op + operand2;
+                temp = Function('"use strict"; return (' + expr + ')')();
+                operand1 = temp;
+                operand2 = '';
+            
                 break;
             default:
-                temp += val;
+                // temp += val;
+                if(op === '') {
+                    operand1 += val;
+                    temp = operand1;
+                }
+                else { 
+                    operand2 += val;
+                    temp = operand2;
+                    saved = operand2;
+                }
        }
    }
 
@@ -37,11 +54,10 @@ function operate(val) {
 }
 
 let op = '';
-let opSelected = false;
-let result = '0';
-let operand1 = null;
-let operand2 = null;
-
+let result = '';
+let operand1 = '';
+let operand2 = '';
+let saved = '';
 
 const resultPanel = document.querySelector('#result-panel #expr');
 
@@ -52,10 +68,20 @@ for(let i=0; i<buttons.length; ++i) {
     button.onclick =  function()  {
         result = operate(button.value);
         if (result != '') resultPanel.textContent = result;
+        if((result+'').length > 17) {
+            resultPanel.style.fontSize = '23px';
+        } else if((result+'').length > 14) {
+            resultPanel.style.fontSize = '29px';
+        } else if((result+'').length > 10) {
+            resultPanel.style.fontSize = '35px';
+        } else if((result+'').length > 0) {
+            resultPanel.style.fontSize = '45px';
+        } 
         console.log("result: " + result);
         console.log("operand1: " + operand1);
         console.log("op:   " + op);
         console.log("operand2: " + operand2);
+        console.log("saved: " + saved);
         console.log("size: " + (result+'').length + ' (' + result +')');
         console.log("---------------");
     };
