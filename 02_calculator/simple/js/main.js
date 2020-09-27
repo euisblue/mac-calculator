@@ -76,10 +76,48 @@ let reset = false;
 
 const resultPanel = document.querySelector('#result-panel #expr');
 
+document.querySelector('body').addEventListener('keydown', (e) => {
+    console.log(e.key);
+    switch(e.key) {
+        case '1':
+        case '2': 
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+        case '0':
+        case '+':
+        case '-':
+        case '*':
+        case '/':
+        case '%':
+        case 'sign':
+            result = operate(e.key);
+            break;
+        case 'Enter':
+            result = operate('=');
+            break;
+        default:
+    }
+    if (result != '') resultPanel.textContent = result;
+    if((result+'').length > 17) {
+        resultPanel.style.fontSize = '23px';
+    } else if((result+'').length > 14) {
+        resultPanel.style.fontSize = '29px';
+    } else if((result+'').length > 10) {
+        resultPanel.style.fontSize = '35px';
+    } else if((result+'').length > 0) {
+        resultPanel.style.fontSize = '45px';
+    }
+})
+
 let buttons = document.querySelectorAll('#button-panel button');
 for(let i=0; i<buttons.length; ++i) {
     let button = buttons[i];
-
+    
     button.onclick =  function()  {
         result = operate(button.value);
         if (result != '') resultPanel.textContent = result;
