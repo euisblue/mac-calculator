@@ -15,12 +15,14 @@ function operate(val) {
             case '-':
             case '*':
             case '/':
+            case '%':
                 op = val;
                 opSelected = true;
                 operand1 = temp;
                 return '';
             case '=':
                 if(operand1 != null && operand2 === null) {
+                    if(op==='') return operand1;
                     if(result==='') result = operand1;
                     let expr = result + op + operand1;
                     temp = Function('"use strict"; return (' + expr + ')')();
@@ -54,6 +56,7 @@ for(let i=0; i<buttons.length; ++i) {
         console.log("operand1: " + operand1);
         console.log("op:   " + op);
         console.log("operand2: " + operand2);
+        console.log("size: " + (result+'').length + ' (' + result +')');
         console.log("---------------");
     };
 }

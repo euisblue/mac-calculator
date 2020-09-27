@@ -64,17 +64,24 @@ body {
 }
 
 #app #result-panel {
+    display: table;
     color: white;
     height: 20%;
     background-color: rgba(80, 91, 102, 1.0);
 }
 
 #app #result-panel #expr {
-    font-size: 3em;
-    margin: 12px 20px 0 0;
+    display: table-cell;
+    vertical-align: bottom;
+    text-align: right;
+    width: 260px;
+
+    font-size: 45px;
+    margin-top: 12px;
+    margin-right: 10px;
     float: right;
     font-weight: 100;
-    letter-spacing: -4px;
+    letter-spacing: -2px;
 }
 
 #app #button-panel {
