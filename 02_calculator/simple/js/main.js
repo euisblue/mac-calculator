@@ -76,7 +76,7 @@ let reset = false;
 
 const resultPanel = document.querySelector('#result-panel #expr');
 
-let buttons = document.getElementsByTagName('button');
+let buttons = document.querySelectorAll('#button-panel button');
 for(let i=0; i<buttons.length; ++i) {
     let button = buttons[i];
 
