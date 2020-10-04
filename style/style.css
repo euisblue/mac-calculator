@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 body {
 <<<<<<< HEAD
 	font-family: 'Noto Serif JP', serif;
@@ -226,3 +227,141 @@ div.option {
 	margin: 10px auto;
 }
 >>>>>>> 08d1773 ([top] etch a sketchy project done)
+=======
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 240px;
+    margin: 3em auto;
+    font-variant-numeric: ordinal;
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(219, 219, 219);
+}
+
+#app {
+    width: 270px;
+    height: 355px;
+    border: 0.7px solid rgba(0,0,0,1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 9px 15px 25px rgba(0,0,0,0.5);
+}
+
+#app #light {
+    display: flex;
+}
+
+#app #light #quit {
+    border-radius: 50%;
+    position: absolute;
+    margin: 5px;
+    width: 13px;
+    height: 13px;
+    background-color: rgba(255, 93, 93, 1.0);
+}
+
+#app #light #quit:active{
+    background-color: rgba(255, 176, 176, 1.0);
+}
+
+#app #light #minimize {
+    border-radius: 50%;
+    position: absolute;
+    margin: 5px 0 5px 28px;
+    width: 13px;
+    height: 13px;
+    background-color: rgba(255, 220, 101, 1.0);
+}
+
+#app #light #minimize:active {
+    background-color: rgb(255, 249, 203);
+}
+
+#app #light #expand {
+    border-radius: 50%;
+    position: absolute;
+    margin: 5px 0 5px 50px;
+    width: 13px;
+    height: 13px;
+    background-color: rgba(72, 213, 22, 1.0);
+}
+
+#app #light #expand:active {
+    background-color: rgb(161, 255, 126);
+}
+
+#app #result-panel {
+    display: table;
+    color: white;
+    height: 20%;
+    background-color: rgba(80, 91, 102, 1.0);
+}
+
+#app #result-panel #expr {
+    display: table-cell;
+    vertical-align: bottom;
+    text-align: right;
+    width: 260px;
+
+    font-size: 45px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    font-weight: 100;
+    letter-spacing: -2px;
+}
+
+#app #button-panel {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#button-panel .buttons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    font-size: 23px;
+    width: 100%;
+
+    border: 0.2px solid rgba(0, 0, 0, 0.4);
+    color: rgba(255,255,255,0.9);
+    background-color: rgba(48, 63, 78, 0.60);
+}
+
+button:active {
+    background-color: rgba(48, 63, 78, 0.30);
+}
+
+button.op:active {
+    background-color: rgb(214, 139, 0);
+}
+
+#button-panel #first-row {
+    background-color: rgba(26, 31, 36, 0.6);
+}
+
+#button-panel #first-row button {
+    border-top: 1px solid rgba(0, 0, 0, 0.1)
+}
+
+button.op {
+    background-color: rgba(255, 165, 0, 1.0);
+    font-weight: bold;
+}
+
+#button-panel div:last-child button:first-child {
+    padding: 0 45px;
+}
+
+#button-panel div:last-child button {
+    border-bottom: none;
+}
+>>>>>>> d1fc2dc (Remove unrelated files)
